@@ -1,0 +1,31 @@
+{
+  "name": "wllppr",
+  "version": "0.0.1",
+  "description": "Desktop app that updates background wallpaper every day.",
+  "main": "app.js",
+  "dependencies": {
+    "flickr-generate-urls": "^0.0.1",
+    "flickr-recent": "^0.0.0",
+    "nconf": "^0.7.2",
+    "wallpaper": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frenchbread/wllppr.git"
+  },
+  "keywords": [
+    "wllppr",
+    "desktop",
+    "wallpaper"
+  ],
+  "author": "Damir Mustafin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frenchbread/wllppr/issues"
+  },
+  "homepage": "https://github.com/frenchbread/wllppr#readme"
+}
