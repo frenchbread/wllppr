@@ -17,20 +17,15 @@ function getImageURL(err,resp,rawHtml){
 		var url = "http:" + src;
 
 		var location = __dirname + "/Images/file.jpg ";
+
 		console.log(location)
 
-		exec("wget -O " + location + " " + url, setWallPaper(location) );
+		exec("wget -O " + location + " " + url, wallpaper.set(location, function(err) {
+			if (err) console.log(err);
+
+			console.log("Done");
+		}));
 
 	});
 
-}
-
-function setWallPaper(location){
-	wallpaper.set(location, function(err){
-
-		if (err) console.log(err);
-
-		console.log("Done");
-
-	});
 }
