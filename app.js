@@ -14,7 +14,7 @@ request('http://photography.nationalgeographic.com/photography/photo-of-the-day/
 
 		var url = "http:" + src;
 
-		var location = __dirname + "/Images/file.jpg ";
+		var location = __dirname + "/Images/photo-of-the-day.jpg ";
 
 		exec("wget -O " + location + " " + url, function (error, stdout, stderr) {
 
@@ -23,7 +23,7 @@ request('http://photography.nationalgeographic.com/photography/photo-of-the-day/
 		  console.log('stdout: ' + stdout);
 		  console.log('stderr: ' + stderr);
 
-			wallpaper.set("./Images/file.jpg", function(err) {
+			wallpaper.set("./Images/photo-of-the-day.jpg", function(err) {
 
 				if (err) throw err;
 
