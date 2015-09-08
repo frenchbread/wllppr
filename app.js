@@ -16,23 +16,22 @@ request('http://photography.nationalgeographic.com/photography/photo-of-the-day/
 
 		var location = __dirname + "/Images/file.jpg ";
 
-		console.log(location)
-
 		exec("wget -O " + location + " " + url, function (error, stdout, stderr) {
 
-		    console.log('stdout: ' + stdout);
-		    console.log('stderr: ' + stderr);
+			if (err) throw err;
 
-		    if (error !== null) {
-		      console.log('exec error: ' + error);
-		    }
+		  console.log('stdout: ' + stdout);
+		  console.log('stderr: ' + stderr);
 
-				wallpaper.set("./Images/file.jpg", function(err) {
-					console.log(err);
-					console.log("Done");
-				});
+			wallpaper.set("./Images/file.jpg", function(err) {
+
+				if (err) throw err;
+
+				console.log("Background image is set!");
 
 			});
+
+		});
 
 	});
 
