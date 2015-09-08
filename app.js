@@ -4,9 +4,7 @@ var wallpaper = require('wallpaper');
 var $ = require('cheerio');
 var exec = require('child_process').exec;
 
-request('http://photography.nationalgeographic.com/photography/photo-of-the-day/', getImageURL);
-
-function getImageURL(err,resp,rawHtml){
+request('http://photography.nationalgeographic.com/photography/photo-of-the-day/', function(err,resp,rawHtml){
 
 	var html = $.load(rawHtml);
 
@@ -20,12 +18,22 @@ function getImageURL(err,resp,rawHtml){
 
 		console.log(location)
 
-		exec("wget -O " + location + " " + url, wallpaper.set(location, function(err) {
-			if (err) console.log(err);
+		exec("wget -O " + location + " " + url, function (error, stdout, stderr) {
 
-			console.log("Done");
-		}));
+		    console.log('stdout: ' + stdout);
+		    console.log('stderr: ' + stderr);
+
+		    if (error !== null) {
+		      console.log('exec error: ' + error);
+		    }
+
+				wallpaper.set("./Images/file.jpg", function(err) {
+					console.log(err);
+					console.log("Done");
+				});
+
+			});
 
 	});
 
-}
+});
