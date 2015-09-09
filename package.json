@@ -10,6 +10,9 @@
     "request": "^2.61.0",
     "wallpaper": "^1.1.0"
   },
+  "scripts": {
+    "start": "electron ."
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/frenchbread/wllppr.git"
@@ -24,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/frenchbread/wllppr/issues"
   },
-  "homepage": "https://github.com/frenchbread/wllppr#readme"
+  "homepage": "https://github.com/frenchbread/wllppr#readme",
+  "devDependencies": {
+    "electron-prebuilt": "^0.32.1"
+  }
 }
