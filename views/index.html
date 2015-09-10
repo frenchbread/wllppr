@@ -1,17 +1,26 @@
 <!doctype html>
-<html >
-    <head>
-        <title></title>
-    </head>
-    <body>
-      <h1>Hello world</h1>
-      <button id="setPhoto" onclick="setWallpaper();">Update background</button>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Electron boilerplate</title>
+		<link rel="stylesheet" href="index.css">
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>Wllppr</h1>
+        <button id="setPhoto" onclick="setWallpaper();">Update background</button>
+			</header>
+			<section class="main"></section>
+			<footer></footer>
       <script>
+        var $ = require('jquery');
         function setWallpaper () {
           var wllppr = require('../lib/unsplash');
           wllppr.set();
-          document.write("Background updated!");
+          $('.main').html('New photo is set!');
         }
       </script>
-    </body>
+		</div>
+	</body>
 </html>
