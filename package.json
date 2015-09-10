@@ -2,7 +2,7 @@
   "name": "wllppr",
   "version": "0.0.1",
   "description": "Desktop app that updates background wallpaper every day.",
-  "main": "app.js",
+  "main": "index.js",
   "dependencies": {
     "cheerio": "^0.19.0",
     "flickr-recent": "^0.0.0",
