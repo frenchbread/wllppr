@@ -1,0 +1,17 @@
+<!doctype html>
+<html >
+    <head>
+        <title></title>
+    </head>
+    <body>
+      <h1>Hello world</h1>
+      <button id="setPhoto" onclick="setWallpaper();">Update background</button>
+      <script>
+        function setWallpaper () {
+          var wllppr = require('../lib/unsplash');
+          wllppr.set();
+          document.write("Background updated!");
+        }
+      </script>
+    </body>
+</html>
