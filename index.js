@@ -5,9 +5,16 @@ app.on('ready', function() {
 
   var win = new BrowserWindow({
     width: 1000,
-    height: 600
+    height: 600,
+    resizable: false
   });
 
   win.loadUrl('file://'+__dirname+'/views/index.html')
 
+});
+
+app.on('window-all-closed', function () {
+	if (process.platform !== 'darwin') {
+		app.quit();
+	}
 });
