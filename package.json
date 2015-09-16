@@ -1,17 +1,19 @@
 {
   "name": "wllppr",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Desktop app that updates background wallpaper every day.",
-  "main": "index.js",
+  "main": "app.js",
   "dependencies": {
     "cheerio": "^0.19.0",
+    "cron": "^1.0.9",
     "flickr-recent": "^0.0.0",
     "nconf": "^0.7.2",
     "request": "^2.61.0",
     "wallpaper": "^1.1.0"
   },
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-packager . MyApp"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,7 @@
   },
   "homepage": "https://github.com/frenchbread/wllppr#readme",
   "devDependencies": {
+    "electron-packager": "^5.1.0",
     "electron-prebuilt": "^0.32.1"
   }
 }
