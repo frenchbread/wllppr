@@ -11,17 +11,21 @@
 				<h1>Wllppr</h1>
 			</header>
       <div class="conteiner">
-        <button id="setPhoto" onclick="setWallpaper();">Update background</button>
       </div>
-			<section class="main"></section>
+			<div class="main">
+				<p>New photo is set every hour.</p>
+				<p>Source: <a href="https://unsplash.com">https://unsplash.com</a></p>
+			</div>
 			<footer></footer>
       <script>
-        var $ = require('jquery');
-        function setWallpaper () {
-          var wllppr = require('../lib/unsplash');
-          wllppr.set();
-          $('.main').html('New photo is set!');
-        }
+				var wllppr = require('../lib/unsplash');
+				var CronJob = require('cron').CronJob;
+
+				new CronJob('0 0 * * * *', function() {
+				  console.log('Tick');
+					wllppr.set();
+				}, null, true, 'America/Los_Angeles');
+
       </script>
 		</div>
 	</body>
