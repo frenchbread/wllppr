@@ -12,11 +12,15 @@ Since app build is failing for some reason, you can try it this way:
 
 #### Insalling dependencies
 
-``` npm install ```
+```
+npm install
+```
 
 #### Running 
 
-``` npm start ```
+```
+npm start
+```
 
 ## License
 
