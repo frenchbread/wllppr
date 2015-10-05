@@ -1,6 +1,6 @@
 {
   "name": "wllppr",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Desktop app that updates background wallpaper every day.",
   "main": "app.js",
   "dependencies": {
@@ -8,12 +8,12 @@
     "cron": "^1.0.9",
     "flickr-recent": "^0.0.0",
     "nconf": "^0.7.2",
-    "request": "^2.61.0",
+    "request": "^2.64.0",
     "wallpaper": "^1.1.0"
   },
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . MyApp"
+    "build": "electron-packager . wllppr --platform=darwin --arch=x64 --version=0.32.3 --ignore=node_modules/electron-*"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,6 @@
   "homepage": "https://github.com/frenchbread/wllppr#readme",
   "devDependencies": {
     "electron-packager": "^5.1.0",
-    "electron-prebuilt": "^0.32.1"
+    "electron-prebuilt": "^0.32.3"
   }
 }
