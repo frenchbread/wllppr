@@ -6,11 +6,17 @@ Desktop app that changes background image every day.
 
 In development.
 
+Check out last app build in `wllppr-darwin-x64` folder. For now app if for Mac only.
+
 ## Try it out
 
-Since app build is failing for some reason, you can try it this way:
+#### Getting the repo
 
-#### Insalling dependencies
+```
+git clone https://github.com/frenchbread/wllppr.git
+```
+
+#### Installing dependencies
 
 ```
 npm install
