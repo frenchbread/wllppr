@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>New wallpapaper every hour.</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>Wllppr</h1>
+			</header>
+      <div class="container">
+      </div>
+			<div class="main">
+				<p>New photo is set every hour.</p>
+
+        <p>
+          <button onclick="updateWllpprNow();">Update wallpaper now.</button>
+        </p>
+
+				<p>Source: <a href="https://unsplash.com">https://unsplash.com</a></p>
+			</div>
+			<footer></footer>
+      <script>
+				var wllppr = require('../lib/unsplash');
+				var CronJob = require('cron').CronJob;
+
+        function updateWllpprNow(){
+          wllppr.set();
+        }
+
+				new CronJob('0 0 * * * *', function() {
+				  console.log('Tick');
+					wllppr.set();
+				}, null, true, 'America/Los_Angeles');
+
+      </script>
+		</div>
+	</body>
+</html>
