@@ -8,6 +8,7 @@
     "cron": "^1.0.9",
     "flickr-recent": "^0.0.0",
     "nconf": "^0.7.2",
+    "node-notifier": "^4.4.0",
     "request": "^2.64.0",
     "wallpaper": "^1.1.0"
   },
