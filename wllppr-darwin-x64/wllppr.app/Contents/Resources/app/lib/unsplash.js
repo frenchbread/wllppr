@@ -5,6 +5,8 @@ var $ = require('cheerio');
 var exec = require('child_process').exec;
 var fs = require('fs');
 
+const notifier = require('node-notifier');
+
 try {
 
     stats = fs.lstatSync(__dirname  + '/Images');
@@ -65,7 +67,18 @@ exports.set = function(){
 
                         if (err) throw err;
 
-                        alert("Background photo is set!");
+                        //alert("Background photo is set!");
+
+                        notifier.notify({
+                            'title': 'Wllppr',
+                            // 'subtitle': "Test subtitle",
+                            'message': 'Wallpaper sucessfully updated.',
+                            'sound': true, // Case Sensitive string of sound file (see below)
+                            'icon': 'Terminal Icon' // Set icon? (Absolute path to image)
+                            //'contentImage': void 0, // Attach image? (Absolute path)
+                            //'open': void 0, // URL to open on click
+                            //'wait': false // if wait for notification to end
+                        });
 
                     });
                 });
